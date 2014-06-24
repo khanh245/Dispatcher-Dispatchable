@@ -23,5 +23,6 @@ int main()
 	Singleton<Dispatcher>::GetInstance()->Enqueue(&acc);
 
 	Singleton<Dispatcher>::DestroyInstance();
+
 	return 0;
 }

@@ -7,9 +7,9 @@
 
 #include "IEvent.h"
 
-IEvent::IEvent() :
-	mPriority(UNSET)
+IEvent::IEvent()
 {
+	mPriority = UNSET;
 }
 
 IEvent::~IEvent()
