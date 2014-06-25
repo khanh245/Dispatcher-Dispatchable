@@ -19,8 +19,11 @@ int main()
 
 	Traffic cop;
 	Accident acc((IEvent::Priority)0, &cop);
+	Accident acc2 ((IEvent::Priority)1, &cop);
 
-	Singleton<Dispatcher>::GetInstance()->Enqueue(&acc);
+	Singleton<Dispatcher>::GetInstance()->enqueue(&acc);
+	Singleton<Dispatcher>::GetInstance()->enqueue(&acc2);
+	IEvent* event = Singleton<Dispatcher>::GetInstance()->dequeue();
 
 	Singleton<Dispatcher>::DestroyInstance();
 

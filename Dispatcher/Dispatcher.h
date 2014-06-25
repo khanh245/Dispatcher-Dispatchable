@@ -17,8 +17,8 @@ public:
 	Dispatcher();
 	virtual ~Dispatcher();
 
-	void Enqueue(IEvent* event);
-	IEvent* Dequeue();
+	void enqueue(IEvent* event);
+	IEvent* dequeue();
 };
 
 #endif /* DISPATCHER_H_ */

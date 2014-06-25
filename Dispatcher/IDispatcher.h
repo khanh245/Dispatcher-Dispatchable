@@ -11,7 +11,17 @@
 #define IDISPATCHER_H_
 
 #include <queue>
+#include <functional>
 #include "IEvent.h"
+
+template <typename TYPE, typename Compare = std::less<IEvent> >
+struct EventComparison	:	public std::binary_function<TYPE*, TYPE*, bool>
+{
+	bool operator() (const TYPE* LHS, const TYPE* RHS) const
+	{
+		return Compare()(*LHS, *RHS);
+	}
+};
 
 class IDispatcher
 {
@@ -19,11 +29,13 @@ public:
 	IDispatcher();
 	virtual ~IDispatcher();
 
-	virtual void Enqueue(IEvent* e) = 0;
-	virtual IEvent* Dequeue() = 0;
+	virtual void enqueue(IEvent* e) = 0;
+	virtual IEvent* dequeue() = 0;
+
+	int count() const { return priorityQueue.size(); }
 
 protected:
-	std::queue<IEvent*> priorityQueue;
+	std::priority_queue<IEvent*, std::vector<IEvent*>, EventComparison<IEvent> > priorityQueue;
 };
 
 #endif /* IDISPATCHER_H_ */

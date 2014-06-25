@@ -27,6 +27,8 @@ public:
 	IEvent();
 	virtual ~IEvent();
 
+	bool operator< (const IEvent& RHS) const;
+
 protected:
 	Priority mPriority;
 };

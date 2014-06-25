@@ -16,12 +16,19 @@ Dispatcher::~Dispatcher()
 {
 }
 
-void Dispatcher::Enqueue(IEvent* _event)
+void Dispatcher::enqueue(IEvent* _event)
 {
 	priorityQueue.push(_event);
 }
 
-IEvent* Dispatcher::Dequeue()
+IEvent* Dispatcher::dequeue()
 {
-	return 0;
+	IEvent* result;
+	if (count() > 0)
+	{
+		result = priorityQueue.top();
+		priorityQueue.pop();
+	}
+
+	return result;
 }
