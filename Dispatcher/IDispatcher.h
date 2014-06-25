@@ -14,7 +14,7 @@
 #include <functional>
 #include "IEvent.h"
 
-template <typename TYPE, typename Compare = std::less<IEvent> >
+template <typename TYPE, typename Compare = std::greater<IEvent> >
 struct EventComparison	:	public std::binary_function<TYPE*, TYPE*, bool>
 {
 	bool operator() (const TYPE* LHS, const TYPE* RHS) const

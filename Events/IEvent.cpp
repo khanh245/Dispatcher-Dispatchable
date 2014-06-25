@@ -17,7 +17,7 @@ IEvent::~IEvent()
 
 }
 
-bool IEvent::operator< (const IEvent& RHS) const
+bool IEvent::operator> (const IEvent& RHS) const
 {
-	return ((int)mPriority < (int)RHS.mPriority);
+	return ((int)mPriority > (int)RHS.mPriority);
 }
