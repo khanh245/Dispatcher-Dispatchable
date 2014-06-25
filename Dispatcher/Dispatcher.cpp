@@ -18,7 +18,7 @@ Dispatcher::~Dispatcher()
 
 void Dispatcher::Enqueue(IEvent* _event)
 {
-
+	priorityQueue.push(_event);
 }
 
 IEvent* Dispatcher::Dequeue()
