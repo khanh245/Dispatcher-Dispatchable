@@ -18,14 +18,15 @@ ISubject::~ISubject()
 
 void ISubject::registerObserver(IObserver* obs)
 {
-	observers.push_back(obs);
+	if (obs != NULL)
+		observers.push_back(obs);
 }
 
 IObserver* ISubject::removeObserver(const unsigned& id)
 {
 	IObserver* object = NULL;
 
-	if (id-1 >= 0 || id-1 < observers.size())
+	if (id-1 >= 0 && id-1 < observers.size())
 	{
 		object = observers[id-1];
 		observers.erase(observers.begin() + (id - 1));
