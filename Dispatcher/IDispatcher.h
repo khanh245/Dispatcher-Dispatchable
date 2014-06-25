@@ -10,6 +10,7 @@
 #ifndef IDISPATCHER_H_
 #define IDISPATCHER_H_
 
+#include <queue>
 #include "IEvent.h"
 
 class IDispatcher
@@ -20,6 +21,9 @@ public:
 
 	virtual void Enqueue(IEvent* e) = 0;
 	virtual IEvent* Dequeue() = 0;
+
+protected:
+	std::queue<IEvent*> priorityQueue;
 };
 
 #endif /* IDISPATCHER_H_ */
