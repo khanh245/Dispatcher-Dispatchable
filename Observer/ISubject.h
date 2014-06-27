@@ -18,7 +18,9 @@ public:
 	virtual ~ISubject();
 
 	void registerObserver(IObserver* obs);
+	IObserver* getObserver(const unsigned& id);
 	IObserver* removeObserver(const unsigned& id);
+
 	void notifyObservers();
 
 protected:
