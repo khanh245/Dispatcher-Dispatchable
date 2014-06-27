@@ -9,7 +9,8 @@
 #ifndef IEVENT_H_
 #define IEVENT_H_
 
-#include "ISubject.h"
+#include <vector>
+#include "IDispatchable.h"
 
 enum EventType
 {
@@ -17,7 +18,7 @@ enum EventType
 	UNKNOWN = -1
 };
 
-class IEvent	:	public ISubject
+class IEvent
 {
 public:
 	enum Priority
@@ -38,9 +39,17 @@ public:
 	Priority getPriority() { return mPriority; }
 	EventType getEventType() { return mType; }
 
+	void registerHandler(IDispatchable* obs);
+	IDispatchable* getHandler(const unsigned& id);
+	IDispatchable* removeHandler(const unsigned& id);
+
+	void notifyHandlers();
+
 protected:
 	Priority mPriority;
 	EventType mType;
+
+	std::vector<IDispatchable*> handlers;
 };
 
 #endif /* IEVENT_H_ */
