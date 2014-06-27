@@ -32,6 +32,8 @@ public:
 	virtual void enqueue(IEvent* e) = 0;
 	virtual IEvent* dequeue() = 0;
 
+	virtual void dispatch() = 0;
+
 	int count() const { return priorityQueue.size(); }
 
 protected:

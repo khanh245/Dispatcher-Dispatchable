@@ -19,6 +19,8 @@ public:
 
 	void enqueue(IEvent* event);
 	IEvent* dequeue();
+
+	void dispatch();
 };
 
 #endif /* DISPATCHER_H_ */

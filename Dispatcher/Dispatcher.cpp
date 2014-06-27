@@ -8,6 +8,8 @@
 
 #include "Dispatcher.h"
 
+#include "IDispatchable.h"
+
 Dispatcher::Dispatcher()
 {
 }
@@ -31,4 +33,14 @@ IEvent* Dispatcher::dequeue()
 	}
 
 	return result;
+}
+
+void Dispatcher::dispatch()
+{
+	if (this->count() > 0)
+	{
+		IEvent* event = dequeue();
+		IDispatchable* handler = (IDispatchable*)event->getObserver(1);
+		handler->handleEvent(event);
+	}
 }

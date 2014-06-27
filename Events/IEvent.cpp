@@ -10,6 +10,7 @@
 IEvent::IEvent()
 {
 	mPriority = UNSET;
+	mType = UNKNOWN;
 }
 
 IEvent::~IEvent()

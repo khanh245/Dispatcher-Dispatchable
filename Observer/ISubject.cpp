@@ -8,12 +8,20 @@
 #include <stdexcept>
 #include "ISubject.h"
 
+#include <iostream>
+
 ISubject::ISubject()
 {
 }
 
 ISubject::~ISubject()
 {
+	if (observers.size() > 0)
+	{
+		for (unsigned i = 0; i < observers.size(); i++)
+			if(observers[i]) delete observers[i];
+		observers.clear();
+	}
 }
 
 void ISubject::registerObserver(IObserver* obs)

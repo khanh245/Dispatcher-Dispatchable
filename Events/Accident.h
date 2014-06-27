@@ -13,8 +13,8 @@
 class Accident : public IEvent
 {
 public:
-	Accident(IEvent::Priority _p, IObserver* obs);
-	virtual ~Accident();
+	Accident(IEvent::Priority _p);
+	~Accident();
 };
 
 #endif /* ACCIDENT_H_ */

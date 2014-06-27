@@ -11,6 +11,12 @@
 
 #include "ISubject.h"
 
+enum EventType
+{
+	TRAFFIC_ACCIDENT = 0,
+	UNKNOWN = -1
+};
+
 class IEvent	:	public ISubject
 {
 public:
@@ -29,8 +35,12 @@ public:
 
 	bool operator> (const IEvent& RHS) const;
 
+	Priority getPriority() { return mPriority; }
+	EventType getEventType() { return mType; }
+
 protected:
 	Priority mPriority;
+	EventType mType;
 };
 
 #endif /* IEVENT_H_ */

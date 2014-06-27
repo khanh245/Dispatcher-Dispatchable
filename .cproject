@@ -36,19 +36,13 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Threading}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Events}&quot;"/>
 								</option>
+								<option id="gnu.cpp.compiler.option.dialect.std.621087565" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.51018348" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1897277054" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.1206560584" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.1050008663" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
-								<option id="gnu.c.compiler.option.include.paths.1769704059" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Singleton}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Dispatcher}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Events}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Dispatchable}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Threading}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Observer}&quot;"/>
-								</option>
+								<option id="gnu.c.compiler.option.include.paths.1769704059" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath"/>
 								<option id="gnu.c.compiler.option.misc.other.211508954" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-fpermissive -c -fmessage-length=0" valueType="string"/>
 								<option id="gnu.c.compiler.option.dialect.std.720017660" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1221155294" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -62,14 +56,7 @@
 								</inputType>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.1074310159" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
-								<option id="gnu.both.asm.option.include.paths.258825304" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Singleton}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Dispatcher}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Events}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Dispatchable}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Threading}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Dispatcher-Dispatchable/Dispatcher-Dispatchable/Observer}&quot;"/>
-								</option>
+								<option id="gnu.both.asm.option.include.paths.258825304" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath"/>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.461108374" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
@@ -163,5 +150,12 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="refreshScope" versionNumber="2">
+		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/Dispatcher-Dispatchable"/>
+		</configuration>
+		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/Dispatcher-Dispatchable"/>
+		</configuration>
+	</storageModule>
 </cproject>

@@ -6,11 +6,17 @@
  */
 
 #include "Accident.h"
+#include "Traffic.h"
 
-Accident::Accident(IEvent::Priority _p, IObserver* obs)
+#include "Singleton.h"
+#include "Dispatcher.h"
+
+Accident::Accident(IEvent::Priority _p)
 {
 	mPriority = _p;
-	registerObserver(obs);
+	mType = TRAFFIC_ACCIDENT;
+	registerObserver(new Traffic());
+	Singleton<Dispatcher>::GetInstance()->enqueue(this);
 }
 
 Accident::~Accident()
