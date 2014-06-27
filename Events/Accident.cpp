@@ -15,7 +15,7 @@ Accident::Accident(IEvent::Priority _p)
 {
 	mPriority = _p;
 	mType = TRAFFIC_ACCIDENT;
-	registerObserver(new Traffic());
+	registerHandler(new Traffic());
 	Singleton<Dispatcher>::GetInstance()->enqueue(this);
 }
 

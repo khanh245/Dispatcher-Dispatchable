@@ -6,8 +6,9 @@
  *  Purpose: A Simple Dispatcher implementation
  */
 
-#include "Dispatcher.h"
+#include <stdexcept>
 
+#include "Dispatcher.h"
 #include "IDispatchable.h"
 
 Dispatcher::Dispatcher()
@@ -25,7 +26,7 @@ void Dispatcher::enqueue(IEvent* _event)
 
 IEvent* Dispatcher::dequeue()
 {
-	IEvent* result;
+	IEvent* result = NULL;
 	if (count() > 0)
 	{
 		result = priorityQueue.top();
@@ -40,7 +41,11 @@ void Dispatcher::dispatch()
 	if (this->count() > 0)
 	{
 		IEvent* event = dequeue();
-		IDispatchable* handler = (IDispatchable*)event->getObserver(1);
-		handler->handleEvent(event);
+		while(event)
+		{
+			IDispatchable* handler = event->getHandler(1);
+			handler->handleEvent(event);
+			event = dequeue();
+		}
 	}
 }

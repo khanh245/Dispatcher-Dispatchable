@@ -34,7 +34,7 @@ public:
 
 	virtual void dispatch() = 0;
 
-	int count() const { return priorityQueue.size(); }
+	unsigned count() const { return priorityQueue.size(); }
 
 protected:
 	std::priority_queue<IEvent*, std::vector<IEvent*>, EventComparison<IEvent> > priorityQueue;

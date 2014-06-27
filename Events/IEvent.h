@@ -10,7 +10,15 @@
 #define IEVENT_H_
 
 #include <vector>
-#include "IDispatchable.h"
+
+class IEvent;
+
+class IDispatchable
+{
+public:
+	virtual ~IDispatchable() { }
+	virtual void handleEvent (IEvent* _event) = 0;
+};
 
 enum EventType
 {

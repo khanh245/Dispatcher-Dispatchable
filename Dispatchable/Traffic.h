@@ -8,7 +8,7 @@
 #ifndef TRAFFIC_H_
 #define TRAFFIC_H_
 
-#include "IDispatchable.h"
+#include "IEvent.h"
 
 class Traffic : public IDispatchable
 {
