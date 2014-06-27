@@ -17,11 +17,11 @@ int main()
 {
 	std::cout << "Dispatcher and dispatchable events demo" << std::endl;
 
-	Accident ac ((IEvent::Priority)2);
-	Accident acc((IEvent::Priority)0);
-	Accident acc2 ((IEvent::Priority)1);
-	Accident norm ((IEvent::Priority)2);
-	Accident acc3 ((IEvent::Priority)3);
+	Accident ac (IEvent::NORMAL);
+	Accident acc(IEvent::VERYHIGH);
+	Accident acc2 (IEvent::HIGH);
+	Accident norm (IEvent::NORMAL);
+	Accident acc3 (IEvent::LOW);
 
 	int count = Singleton<Dispatcher>::GetInstance()->count();
 	std::cout << "Total of events: " << count << std::endl;
