@@ -20,7 +20,7 @@ protected:
 	virtual void ThreadEntry() = 0;
 
 private:
-	pthread_t t;
+	pthread_t mThread;
 };
 
 

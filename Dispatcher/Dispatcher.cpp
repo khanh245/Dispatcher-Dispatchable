@@ -9,7 +9,6 @@
 #include <stdexcept>
 
 #include "Dispatcher.h"
-#include "IDispatchable.h"
 
 Dispatcher::Dispatcher()
 {
