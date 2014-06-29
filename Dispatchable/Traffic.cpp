@@ -29,8 +29,3 @@ void Traffic::handleEvent(IEvent* _event)
 		break;
 	}
 }
-
-void Traffic::update()
-{
-
-}

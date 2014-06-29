@@ -17,7 +17,6 @@ public:
 	~Traffic();
 
 	void handleEvent(IEvent* _event);
-	void update();
 };
 
 #endif /* TRAFFIC_H_ */

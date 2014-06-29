@@ -19,6 +19,4 @@ Accident::Accident(IEvent::Priority _p)
 	Singleton<Dispatcher>::GetInstance()->enqueue(this);
 }
 
-Accident::~Accident()
-{
-}
+Accident::~Accident() { }
