@@ -14,7 +14,7 @@ class Accident : public IEvent
 {
 public:
 	Accident(IEvent::Priority _p);
-	~Accident();
+	virtual ~Accident();
 };
 
 #endif /* ACCIDENT_H_ */

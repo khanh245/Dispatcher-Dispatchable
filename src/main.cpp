@@ -13,7 +13,7 @@
 #include "Traffic.h"
 #include "Accident.h"
 
-int main()
+void test()
 {
 	std::cout << "Dispatcher and dispatchable events demo" << std::endl;
 
@@ -28,6 +28,18 @@ int main()
 
 	Singleton<Dispatcher>::GetInstance()->dispatch();
 	Singleton<Dispatcher>::DestroyInstance();
+}
+
+void test2()
+{
+	Accident* acc = new Accident(IEvent::VERYHIGH);
+	delete acc;
+}
+
+int main()
+{
+	test();
+	//test2();
 
 	return 0;
 }
